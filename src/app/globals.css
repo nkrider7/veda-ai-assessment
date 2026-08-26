@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f4f5;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --muted: #71717a;
+  --border: #e4e4e7;
+  --accent: #ff8a4c;
+  --accent-soft: #ffe8d9;
+  --accent-text: #c2410c;
+  --success: #16a34a;
+  --success-bg: #dcfce7;
+  --danger: #ea580c;
+  --danger-bg: #ffedd5;
+  --sidebar: #ffffff;
+  --rail: #1f1f1f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  margin: 0;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.45s ease-out both;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 1.6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 1s linear infinite;
+}
+
+.highlight-box {
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.9), 0 8px 24px rgba(34, 197, 94, 0.25);
+  background: rgba(74, 222, 128, 0.18);
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.score-good {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.score-bad {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.score-partial {
+  background: #fef3c7;
+  color: #b45309;
 }
