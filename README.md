@@ -4,7 +4,12 @@ Full-stack teacher tool that extracts questions from a question paper, maps hand
 
 ## Live demo
 
-> Deploy to Vercel (see below), then put the URL here.
+- **GitHub:** https://github.com/nkrider7/veda-ai-assessment
+- **One-click deploy:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/nkrider7/veda-ai-assessment&env=GEMINI_API_KEY&envDescription=Google%20Gemini%20API%20key%20from%20https://aistudio.google.com/apikey&project-name=veda-ai-assessment&repository-name=veda-ai-assessment)
+
+After deploying, set `GEMINI_API_KEY` in the Vercel project environment variables (same key as in `.env`).
+
+**Live URL:** add your Vercel URL here after deploy (e.g. `https://veda-ai-assessment.vercel.app`).
 
 ## Features
 
@@ -88,5 +93,5 @@ src/
 ## Submission notes
 
 - **AI model/API:** Google Gemini `gemini-3.6-flash` (free tier)
-- **GitHub:** (push this repo)
+- **GitHub:** https://github.com/nkrider7/veda-ai-assessment
 - **Live URL:** (after Vercel deploy)
