@@ -92,6 +92,7 @@ src/
 
 ## Submission notes
 
-- **AI model/API:** Google Gemini `gemini-3.6-flash` (free tier)
+- **AI model/API:** Google Gemini `gemini-3.6-flash` (free tier) via `@google/generative-ai`
 - **GitHub:** https://github.com/nkrider7/veda-ai-assessment
-- **Live URL:** (after Vercel deploy)
+- **Live URL:** Deploy with the Vercel button above, then paste the `.vercel.app` URL into the form
+- **Approach:** Client converts PDF/images → Gemini extracts ordered questions (sub-parts split) → Gemini finds answer boxes `[ymin,xmin,ymax,xmax]` (0–1000) and maps out-of-order answers → Gemini grades + feedback → side-by-side review with green highlights
